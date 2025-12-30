@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Camera</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  height: 100%;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+#loading {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #aaa;
+  font-size: 18px;
+}
+
+#spider {
+  position: fixed;
+  inset: 0;
+  display: none;
+}
+
+#spider img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+</style>
+</head>
+<body>
+
+<div id="loading">Initializing camera…</div>
+
+<div id="spider">
+  <img src="https://i.imgur.com/9QpFZQk.jpg" alt="spider">
+</div>
+
+<script>
+setTimeout(() => {
+  document.getElementById("loading").style.display = "none";
+  document.getElementById("spider").style.display = "block";
+}, 700);
+</script>
+
+</body>
+</html>
